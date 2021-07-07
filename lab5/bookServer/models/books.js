@@ -10,6 +10,11 @@ module.exports = class Book{
         this.author = author;
     }
  
+    save() {
+        this.id = Math.random().toString();
+        books.push(this);
+        return this;
+    }
 
     // update
 
@@ -32,6 +37,18 @@ module.exports = class Book{
          }
 
      }
+
+     static fetchAll() {
+        return books;
+    }
+    static findById(bookId) {
+        const index = books.findIndex(p => p.id === bookId);
+        if (index > -1) {
+            return books[index];
+        } else {
+            throw new Error('NOT Found');
+        }
+    }
 
     }
   
