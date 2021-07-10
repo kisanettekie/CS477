@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='./styles.css' rel="stylesheet" type="text/css">
+    <title>HOME</title>
+
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Kisanet's Book Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login form -->
+    <div class="container" id="login-div">
+        <form id="login-form">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter username..." id="username">
+
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Enter password..." id="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="login-btn">Submit</button>
+        </form>
+
+        <div id="error-msg" class="alert alert-danger"></div>
+
+
+    </div>
+
+
+
+
+    <div id="wrapper" id="book-container">
+        <!-- logout button -->
+        <button id="logout-btn">Logout</button>
+        <h1>Books List</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">ISBN</th>
+                    <th scope="col">PublishedDate</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id=book-table>
+                <tr>
+
+                    <!-- <td>Title</td>
+                    <td>ISBN</td>
+                    <td>@publishedDate</td>
+                    <td>@author</td> -->
+                </tr>
+
+
+            </tbody>
+        </table>
+        <strong><em><h2 id='form-title'>Add a New Book</h2></em></strong>
+        <form id="form-id">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title">
+
+            </div>
+            <div class="mb-3">
+                <label for="isbn" class="form-label">ISBN</label>
+                <input type="text" class="form-control" id="isbn">
+            </div>
+            <div class="mb-3">
+                <label for="publishedDate" class="form-label">Published Date</label>
+                <input type="text" class="form-control" id="publishedDate">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="addBtn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
